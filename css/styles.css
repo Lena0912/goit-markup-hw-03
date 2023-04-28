@@ -6,12 +6,25 @@
     --color-for-theme-dark: #FFFFFF;
     --light-mode: #F4F4FD;
     --accent-button: #E7E9FC;
+    --indent: 24px;
+    --items: 4; 
 }
 .list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .link {
     text-decoration: none;
+}
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+img {
+    display: block;
+}
+button {
+    cursor: pointer;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -19,12 +32,43 @@ body {
     color: var(--text-color);
     background-color: var(--color-for-theme-dark);
 }
+.container {
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 2px solid tomato;
+}
+.section {
+padding: 120px 0;
+}
+
 /* Header */
+.header-container {
+    display: flex;
+    align-items: center;   
+    border-bottom: 1px solid #E7E9FC;
+}
+.page-header {
+    padding: 24px 156px;
+}
+.page-nav {
+    display: flex;
+    margin-right: auto;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 .menu-link {           
         font-weight: 500;        
         line-height: 1.5;
         letter-spacing: 0.02em;       
         color: var(--main-color);
+        display: block;
+        padding: 24px 0;
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -32,12 +76,25 @@ color: var(--accent-color);
 }
 .address {
     font-style: normal;
+    
+}
+.address-menu {
+    display: flex;
+    
 }
 .nav-link-contacts {           
         font-weight: 400;        
         line-height: 1.5;           
         letter-spacing: 0.02em;    
         color: var(--text-color);
+}
+.mail {
+    margin-right: 40px;
+    padding: 24px 0;
+}
+.tel {
+    margin-right: 156px;
+    padding: 24px 0;
 }
 .nav-link-contacts:hover,
 .nav-link-contacts:focus {
@@ -51,6 +108,9 @@ color: var(--accent-color);
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: var(--primery-brend);
+        margin-right: 76px;
+        align-items: center;
+        display: flex;
 }
 .logo-part {
     color: var(--main-color);
@@ -58,18 +118,30 @@ color: var(--accent-color);
 .logo-part-dark {
 color: var(--light-mode);
 }
-
+.logo-footer {
+   
+    margin-bottom: 24px;
+}
 /* Hero */
 .hero {
     background-color: var(--main-color);
+    text-align: center;
+
 }
 .hero-title {    
         font-weight: 700;
         font-size: 56px;
         line-height: 1.07;    
-        text-align: center;
         letter-spacing: 0.02em;     
         color: var(--color-for-theme-dark);
+        margin-bottom: 48px;
+        padding: 0;
+        margin-top: 188px;
+        width: 496px;        
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+
 }
 .modal-btn {
         font-family: inherit;
@@ -81,11 +153,23 @@ color: var(--light-mode);
         background: var(--primery-brend);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
-        cursor: pointer;
+        cursor: pointer;        
+        flex-direction: row;
+        align-items: center;
+        padding: 16px 32px;
+        gap: 10px;
+        margin-bottom: 188px;
+        
 }
 .modal-btn:hover,
 .modal-btn:focus {
     background: var(--accent-color);  
+}
+/* Our advantages */
+.advantages-list {
+    display: flex;
+    gap: 24px;
+    width: 1128px;
 }
 .feacher {
     font-weight: 500;
@@ -93,14 +177,27 @@ color: var(--light-mode);
     line-height: 1.2;   
     letter-spacing: 0.02em;
     color: var(--main-color);
+    margin-bottom: 8px;
+    text-align: center;
+    margin-top: 32px;
 }
 .feacher-discr {
     font-size: 16px;
     line-height: 1.5;    
     letter-spacing: 0.02em;
-    color: var(--text-color);    
+    color: var(--text-color);  
+    text-align: center;
+    margin-bottom: 32px;
 }
 /* What are we doing */
+.card-set {
+display: flex;
+flex-wrap: wrap;
+gap: var(--indent);
+}
+.card-set-items {
+flex-basis: calc((100% - var(--indent)* var(--items)-1)/ var(--items));
+}
 .work-title {
         font-weight: 700;
         font-size: 36px;
@@ -109,25 +206,50 @@ color: var(--light-mode);
         letter-spacing: 0.02em;
         text-transform: capitalize;
         color: var(--main-color);
+        margin-bottom: 72px;
+}
+.work-list {
+    display: flex;
+    gap: 24px;
 }
 /* Our team */
 .our-team {
     background-color: var(--light-mode);
+    
+}
+
+.our-team-list {
+    --items: 4;
 }
 .team-cards {
         background:var(--color-for-theme-dark);
         box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
         border-radius: 0px 0px 4px 4px;
+        
 }
 /* Footer */
 .footer {
     background-color: var(--main-color);
+    /* margin-bottom: 100px;
+        margin-top: 100px; */
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
 }
 .footer-descr {    
         font-size: 16px;
         line-height: 1.5;      
         letter-spacing: 0.02em;
         color: var(--light-mode);
+}
+.footer-box {
+    display: block;
+    width: 264px;   
+    margin-left: 156px;
+    margin-right: 1020px;
+    
+    outline: 2px solid teal;
+
 }
 /* Button */
 .button {
@@ -141,12 +263,23 @@ color: var(--light-mode);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
+    padding: 12px 24px;
 }
 .button:hover,
 .button:focus {
     background: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     color: var(--color-for-theme-dark)
+}
+.button-list {
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 96px;
+    margin-bottom: 72px;
 }
 .visually-hidden {
     position: absolute;
@@ -161,6 +294,31 @@ color: var(--light-mode);
     overflow: hidden;
 }
 /* Portfolio */
+/* .portfolio-container{
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: teal; */
+}
+.flex-element {
+    width: 360px;
+    margin-right: 24px;
+    margin-bottom: 32px;
+    border: 1px solid #E7E9FC;
+    /* background-color: tomato; */
+}
+.flex-element:nth-child(3n) {
+    margin-right: 0;
+}
+.flex-element:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}
 .subtitle {
     font-weight: 500;
     font-size: 20px;
