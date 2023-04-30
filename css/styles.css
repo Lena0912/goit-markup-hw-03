@@ -182,7 +182,7 @@ color: var(--accent-color);
     line-height: 1.2;   
     letter-spacing: 0.02em;
     color: var(--main-color);
-    padding-bottom: 8px;   
+    margin-bottom: 8px;
     padding-top: 32px;
 }
 .feacher-discr {
