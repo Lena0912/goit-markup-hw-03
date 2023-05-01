@@ -133,8 +133,7 @@ color: var(--accent-color);
         line-height: 1.07;    
         letter-spacing: 0.02em;     
         color: var(--color-for-theme-dark);
-        margin-bottom: 48px;       
-        margin-top: 188px;
+        margin-bottom: 48px;   
         max-width: 496px;
         display: flex;
         margin-left: auto;
@@ -183,14 +182,14 @@ color: var(--accent-color);
     letter-spacing: 0.02em;
     color: var(--main-color);
     margin-bottom: 8px;
-    padding-top: 32px;
+    
 }
 .feacher-discr {
     font-size: 16px;
     line-height: 1.5;    
     letter-spacing: 0.02em;
     color: var(--text-color);
-    padding-bottom: 32px;
+   
 }
 /* What are we doing */
 .card-set {
